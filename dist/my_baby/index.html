@@ -54,13 +54,13 @@
 					var event_day = moment(data.baby.birthday2).add(t_event.value,t_event.type);
 					var now = moment();
 
-					var diff_day = event_day.diff(now,'days');
+					var diff_day = event_day.diff(now,'days',true);
 					if(diff_day < 0) continue;
 
 					var row = $("<tr>");
 					var title = $("<td class='event-title'>"+t_event.name+"</td>");
 					var date = $("<td class='event-date'>"+event_day.format('YYYY-MM-DD')+"</td>");
-					var diff = $("<td class='event-diff'>"+diff_day+"</td>");
+					var diff = $("<td class='event-diff'>"+parseInt(diff_day+1)+"</td>");
 
 					$("#event-state-body").append( row.append(title,date,diff) );
 				}

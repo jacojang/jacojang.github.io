@@ -2,7 +2,7 @@
 	"baby":{
 		"name":"봉봉이",
 		"birthday":"2015-05-04 16:25:00",
-		"birthday2":"2015-05-04"
+		"birthday2":"2015-05-04 00:00:00"
 	},
 	"events":[
 		{"name":"100th Day",	"value":100,	"type":"d"},
