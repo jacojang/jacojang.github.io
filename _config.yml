@@ -3,16 +3,16 @@
 # Site wide configuration
 ####################################
 #
-title:       "Leonids Jekyll theme"
-description: "Clean Jekyll blog theme called Leonids."
-url:         # the base hostname & protocol for your site
+title:       "jacojang"
+description: "jacojang의 일기장"
+url:         "http://jacojang.github.io"
 
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Asia/Seoul
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -35,9 +35,9 @@ sass:
 ####################################
 #
 owner:
-  name: Your name
+  name: Jacojang 
   avatar: avatar.jpg
-  job: "Your job"
+  job: "Software Engineer"
   bio: "Write about yourself"
   email:
   disqus-shortname:
