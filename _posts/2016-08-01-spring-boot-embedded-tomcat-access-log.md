@@ -9,19 +9,23 @@ image:
 Embedded tomcat을 사용하는 Spring-Boot 프로젝트에서 Access log를 설정하는 방법
 
 ##### application.properties 설정
-  ```
-server.tomcat.access-log-pattern=%{yyyy-MM-dd HH:mm:ss}t %s %r %{User-Agent}i %{Referer}i %a %b
-server.tomcat.access-log-enabled=true
-server.tomcat.base-dir=.  
-```
+{% highlight properties %}
+# Access Log (Embeded Tomcat)       
+server.tomcat.accesslog.pattern=%{yyyy-MM-dd HH:mm:ss}t\t%s\t%r\t%{User-Agent}i\t%{Referer}i\t%a\t%b   
+server.tomcat.accesslog.enabled=true   
+server.tomcat.basedir=.   
+{% endhighlight %}
 
-  * 생성되는 파일
-```
-```
 
-  * 파일 내용
-```
-```
+  * 생성되는 파일 예제
+{% highlight properties %}
+access_log.2016-08-01.log   
+{% endhighlight %}
+
+  * 파일 내용 예제
+{% highlight text %}
+2016-08-01 09:54:56        200      GET /favicon.ico HTTP/1.1 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36    http://localhost:8880/click?appId=ABBC10E8E1F81E4AF16B98BDF12E7C3C14697712660000&telCo=2&profileId=1&clientTm=12312312&clientStore=aaaa&productId=pppid&packageName=123123  0:0:0:0:0:0:0:1      946
+{% endhighlight %}
 
 
 ##### Pattern Reference
@@ -50,19 +54,19 @@ server.tomcat.base-dir=.
 
 추가 적으로 Header 나 Cookie등에서 특정 정보를 취득할 수 도 있다.
 
-```
-    common - %h %l %u %t "%r" %s %b
-    combined - %h %l %u %t "%r" %s %b **"%{Referer}i"** **"%{User-Agent}i"**
-```
+{% highlight text %}
+common - %h %l %u %t "%r" %s %b   
+combined - %h %l %u %t "%r" %s %b **"%{Referer}i"** **"%{User-Agent}i"**
+{% endhighlight %}
 
-    * %{xxx}i Request Header 내의 정보
-    * %{xxx}o Response Header 내의 정보
-    * %{xxx}c 특정 Cookie 내용
-    * %{xxx}r ServletRequest 의 특정 attribute
-    * %{xxx}s HttpSession 의 특정 attribute
-    * %{xxx}t DateFormat을 출력하기 위한 옵션
+  * %{xxx}i Request Header 내의 정보
+  * %{xxx}o Response Header 내의 정보
+  * %{xxx}c 특정 Cookie 내용
+  * %{xxx}r ServletRequest 의 특정 attribute
+  * %{xxx}s HttpSession 의 특정 attribute
+  * %{xxx}t DateFormat을 출력하기 위한 옵션
 
 ##### Links
-  * ()[https://tomcat.apache.org/tomcat-7.0-doc/api/org/apache/catalina/valves/AccessLogValve.html]
+  * [https://tomcat.apache.org/tomcat-7.0-doc/api/org/apache/catalina/valves/AccessLogValve.html]()
 
 <!--more-->
