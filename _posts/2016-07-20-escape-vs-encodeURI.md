@@ -1,7 +1,7 @@
 ---
 layout: post
 title: escape() vs encodeURI() vs encodeURIComponent()
-categories: [javascript, html]
+categories: []
 comments: true
 image:
 ---
