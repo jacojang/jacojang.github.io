@@ -6,7 +6,7 @@ comments: true
 image:
 ---
 
-> ※ 이 문서는 개인적인 필요에 의해 JPA 프로그래밍 책을 요약/추가 한 내용입니다.
+> ※ 이 문서는 개인적인 필요에 의해 [JPA 프로그래밍](http://www.acornpub.co.kr/book/jpa-programmig) 책을 요약/추가 한 내용입니다.
 
 ### persistence.xml
 {% highlight xml %}
