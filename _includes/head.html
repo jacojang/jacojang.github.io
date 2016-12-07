@@ -20,9 +20,9 @@
   <link rel="shortcut icon" href="{{ site.url }}/favicon.png">
 
   <script>
-    console.log("1.document.location.href="+top.location.href);
-    console.log("2.document.location.href="+top.location);
-    console.log("3.document.location.href="+window.location);
-    console.log("4.document.location.href="+window.location.href);
+    try{ console.log("1.document.location.href="+top.location.href); }catch(e){}
+    try{ console.log("2.document.location.href="+top.location); }catch(e){}
+    try{ console.log("3.document.location.href="+window.location); }catch(e){}
+    try{ console.log("4.document.location.href="+window.location.href); }catch(e){}
   </script>
 </head>
