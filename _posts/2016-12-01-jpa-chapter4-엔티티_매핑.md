@@ -150,4 +150,35 @@ enum 타입을 매핑할 때 사용한다.
       * 문자로 저장되므로 데이터크기가 커지고 느리다. 하지만 enum의 순서와 상관없이 사용가능해 진다.
       * Default는 ORDINAL이지만 STRING을 더 추천 한다.
 
+#### @Temporal
+날짜 타입을 매핑할 때 사용
+속성을 입력 하지 않으면 자바의 Date과 가장 유사한 Timestamp로 저장 된다(H2, Oracle, PostgreSQL). 하지만 이는 DB의 종류에 따라 Datetime으로 저장되기도 한다(MySQL).
+
+##### 속성
+  * **value**
+    * TemporalType.DATE
+      * 2013-01-23 와 같은 날짜 타입
+    * TemporalType.TIME
+      * 11:23:18 과 같은 시간 타입
+    * TemporalType.TIMESTAMP
+      * 2013-01-23 11:23:18 과 같이 DB의 Timestamp 타입과 매핑
+
+
+#### @Lob
+@Lob는 별도의 속성은 없다. 대신 매핑을 문자열이면 CLOB, 그외의 타입에는 BLOB으로 매핑한다.
+
+  * CLOB : String, char[], java.sql.CLOB
+  * BLOB : byte[], java.sql.BLOB
+
+#### @Transient
+이 필드는 매핑하지 말라는 의미이다. 이는 임시로 중간 값을 저장하는 용도로 사용가능하다.
+
+#### @Access
+JPA가 엔티티 데이터에 접근하는 방식, @Access를 설정하지 않으면 @Id의 설정위치에 따라 서 접근 방식이 결정 된다.
+@Id가 필드에 붙어 있으면 FIELD접근 방식을 의미하므로 Getter가 없어도 된다. 아이디가 프로퍼티에 있으면 PROPERTY접근 방식을 의미하게 된다.
+하지만 이 두가지 방식을 섞어서 사용도 가능하다.
+
+  * AccessType.FIELD : 필드 접근, Private이어도 접근 가능하다.
+  * AccessType.PROPERTY : 프로퍼티 접근, 접근자(Getter)를 이용한다.
+
 <!--more-->

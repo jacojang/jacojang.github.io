@@ -35,7 +35,7 @@ sass:
 ####################################
 #
 owner:
-  name: Jacojang 
+  name: Jacojang
   avatar: avatar.jpg
   job: "Software Engineer"
   bio: "AhnLab에서 서버개발자로 일하고 있는 Jacojang입니다."
@@ -52,7 +52,7 @@ owner:
   bing-verify:
   github: "jacojang"
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: "jacojang"
+  linkedin: "재만-장-46894abb?trk=hp-identity-photo"
   xing: #username
   instagram: #username
   lastfm: #username
