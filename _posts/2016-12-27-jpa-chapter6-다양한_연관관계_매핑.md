@@ -359,5 +359,22 @@ public void find(){
 }
 {% endhighlight %}
 
+#### 단방향
+단방향과 마찬가지로 양방향은 반대쪽도 @ManyToMany를 사용한다.
+그리고 양방향중 한곳에 mappedBy를 설정해서 연관관계 주인을 지정해 준다. mappedBy가 없는 쪽이 연관관계의 주인이다.
+
+{% highlight java %}
+@Entity
+public class Product {
+    @Id
+    private String id;
+
+    @ManyToMany(mappedBy = "products")
+    private List<Member> members;
+
+    ...
+}
+{% endhighlight %}
+
 
 <!--more-->
