@@ -30,7 +30,7 @@
 				var birthday_org = moment(data.baby.birthday);
 				var birthday = moment(data.baby.birthday2);
 
-				var diff_day = now.diff(birthday,'days');
+				var diff_day = now.diff(birthday,'days')+1;
 				var diff_day_org = now.diff(birthday_org,'days',true);
 				var hour = 24*(diff_day_org - parseInt(diff_day_org));
 				var minute = 60*(hour - parseInt(hour));
