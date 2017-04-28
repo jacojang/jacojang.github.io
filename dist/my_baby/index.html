@@ -31,7 +31,7 @@
 			var param = document.location.href.match(re);
 
 			if(param && param.length > 0){
-				data = param+".json";
+				data = param[1]+".json";
 			}
 
 			jQuery.ajax({
