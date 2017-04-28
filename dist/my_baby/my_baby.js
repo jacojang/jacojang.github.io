@@ -18,7 +18,7 @@ function showState(data){
 
 	$('#current-state').text('');
 
-	var str = $("<blockquote> 태어난지 <span class='pday'>"+months+"</span>개월 <span class='pday'>"+days+"</span>일 이 지났습니다. (<span class='pday'>"+parseInt(diff_day)+"</span>일)<br>정확히는 <span class='pday'>"+parseInt(diff_day_org)+"</span>일 <span class='phour'>"+parseInt(hour)+"</span>시간 <span class='pminute'>"+parseInt(minute)+"</span>분 <span class='psecond'>"+parseInt(sec)+"</span>초 지났습니다.</blockquote>");
+	var str = $("<blockquote> 태어난지 <span class='pday'>"+months+"</span>개월 <span class='pday'>"+days+"</span>일째 입니다. (<span class='pday'>"+parseInt(diff_day)+"</span>일)<br>정확히는 <span class='pday'>"+parseInt(diff_day_org)+"</span>일 <span class='phour'>"+parseInt(hour)+"</span>시간 <span class='pminute'>"+parseInt(minute)+"</span>분 <span class='psecond'>"+parseInt(sec)+"</span>초 지났습니다.</blockquote>");
 
 	$('#current-state').append(str);
 
