@@ -34,7 +34,7 @@ function showEvents(data){
 		var event_value = t_event.value;
 		var now = moment();
 
-		if(t_event.type == 'days'){
+		if(t_event.type == 'd'){
 			event_value += 1;
 			//now = moment().add(1,'days');
 		}
