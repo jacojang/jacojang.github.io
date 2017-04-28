@@ -35,11 +35,11 @@ function showEvents(data){
 		var now = moment();
 
 		if(t_event.type == 'd'){
-			event_value += 1;
-			//now = moment().add(1,'days');
+			event_value -= 1;
+			now = moment().add(1,'days');
 		}
 
-		var event_day = moment(data.baby.birthday2).add(t_event.value,t_event.type);
+		var event_day = moment(data.baby.birthday2).add(event_value,t_event.type);
 
 		var diff_day = event_day.diff(now,'days',true);
 		if(diff_day < 0) continue;
