@@ -36,7 +36,6 @@ function showEvents(data){
 
 		if(t_event.type == 'd'){
 			event_value -= 1;
-			now = moment().add(1,'days');
 		}
 
 		var event_day = moment(data.baby.birthday2).add(event_value,t_event.type);
