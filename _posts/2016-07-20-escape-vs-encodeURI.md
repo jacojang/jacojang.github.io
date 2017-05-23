@@ -10,23 +10,23 @@ image:
 
 
 
-##### 1. escape()
+### 1. escape()
 아래의 문자열을 제외한 모든 문자는 %XX나 %uXXXX 형태의 16진수를 문자열로 나타넨 형식으로 변환된다.
 
 ```
 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890 @*-_+./  
 ```
 
-##### 2. encodeURI()
+### 2. encodeURI()
 함수 이름에서도 알 수 있듯이 URI 전체를 encoding 할때 사용되는 함수 이다. URI에 사용되는 특수 문자(: ; / = ? &)를 encoding 하지 않는 다는 것만 빼고 escape()와 동일하다.
 
-##### 3. encodeURIComponent()
+### 3. encodeURIComponent()
 함수 이름에서도 할 수 있듯이 URI 전체가 아닌 부분부분을 encoding할때 사용하는 함수 이다. URI에 사용되는 특수 문자(: ; / = ? &)까지 encoding 된다는 것만 빼고 escape()와 동일하다.
 
 URI에 사용되는 특수 문자가 encoding 되므로 URI 전체를 encoding 하는 경우 URI가 아닌 하나의 문자열로 인식 되게 되므로 주의 해야 한다. URI의 Parameter의 Value값을 encoding할때 주로 사용되게 된다.
 <!--more-->
 
-**예제**
+### 예제
 {% highlight javascript %}
 var str="http://test.com/user.jsp?name=홍 길동&phone=010-123-1234";
 
