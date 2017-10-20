@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script>
+        function testStart(){
+            window.addEventListener('error', function(message, url, lineno, colno, obj){
+                console.log("Error logging : ", message, url, lineno, colno, obj);
+            });
+        }
+
+        function throwException(){
+            var a = window.adbc.aaa;
+            return a;
+        }
+
+        function securityBlock(){
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", function(){
+                console.log("Load success: ", this.responseText.length);
+            });
+            oReq.open("GET", "http://jacojang.github.io/dist/my_baby/");
+            oReq.send();
+        }
+
+    </script>
+</head>
+<body onload="testStart()">
+    <button onclick="throwException(); return false;">Exception</button>
+    <button onclick="securityBlock(); return false;">SecurityBlock</button>
+<body>
+</html>
