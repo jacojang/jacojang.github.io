@@ -15,6 +15,9 @@
 		{"name":"2nd Birthday",	"value":2,	"type":"y"},
 		{"name":"3nd Birthday",	"value":3,	"type":"y"},
 		{"name":"1000th Day",	"value":1000,	"type":"d"},
-		{"name":"1500th Day",	"value":1500,	"type":"d"}
+		{"name":"1500th Day",	"value":1500,	"type":"d"},
+		{"name":"2000th Day",	"value":2000,	"type":"d"},
+		{"name":"2500th Day",	"value":2500,	"type":"d"},
+		{"name":"3000th Day",	"value":3000,	"type":"d"}
 	]
 }
