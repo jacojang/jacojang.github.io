@@ -7,8 +7,25 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 
 		<script type="text/javascript"> 
+			function initScale() {
+				$("#bottom").css("zoom", "100%");
+				$("#scaleValue").val("100");
+			}
+
+			function scaleDown() {
+				let cv = parseInt($("#scaleValue").val()) - 5;
+				$("#bottom").css("zoom", cv+"%");
+				$("#scaleValue").val(""+cv);
+			}
+
+			function scaleUp() {
+				let cv = parseInt($("#scaleValue").val()) + 5;
+				$("#bottom").css("zoom", cv+"%");
+				$("#scaleValue").val(""+cv);
+			}
 
 			$(document).ready(function() { 
+				initScale();
 
 				$('.thumb').each(function(index, img) {
 					$(img).click(function(){
@@ -41,13 +58,16 @@
 
 	<body>
 		<div class="top-pane">
+			scale = <input type="button" value=" - " onclick="scaleDown()"><input type="button" value=" + " onclick="scaleUp()"><input id="scaleValue" type="text" value="100">
+		</div>
+		<div class="top-pane">
 			<img src="images/number1.png" class="thumb">
 			<img src="images/number2.png" class="thumb">
 			<img src="images/number3.png" class="thumb">
 			<img src="images/number4.png" class="thumb">
 			<img src="images/star1.png" class="thumb">
 		</div>
-		<div class="bottom-pane">
+		<div id="bottom" class="bottom-pane">
 			<img id="target" src="" />
 		</div>
 	</body>
