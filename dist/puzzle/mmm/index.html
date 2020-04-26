@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.jqpuzzle.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.jqpuzzle.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<script type="text/javascript"> 
+
+			$(document).ready(function() { 
+
+				$('.thumb').each(function(index, img) {
+					$(img).click(function(){
+						var url = window.location.href.split('?')[0]+"?"+$(img).attr('src');
+						location.replace(url);
+					})
+				});
+
+				imageFile = window.location.search.slice(1);
+				console.log(imageFile);
+				
+				if (imageFile) {
+					$('#target').attr('src', imageFile);
+					$('#target').css('class', "jqPuzzle");
+					$('#target').jqPuzzle({ 
+						rows: 3,
+						cols: 3,
+						hole: 9,
+						shuffle: true, 
+						style: { 
+							gridSize: 2, 
+							overlap: false, 
+							backgroundOpacity: 0 
+						} 
+					}); 
+				}
+			}); 
+		</script> 
+	</head>
+
+	<body>
+		<div class="top-pane">
+			<img src="images/number1.png" class="thumb">
+			<img src="images/number2.png" class="thumb">
+			<img src="images/number3.png" class="thumb">
+			<img src="images/number4.png" class="thumb">
+			<img src="images/star1.png" class="thumb">
+		</div>
+		<div class="bottom-pane">
+			<img id="target" src="" />
+		</div>
+	</body>
+</html>

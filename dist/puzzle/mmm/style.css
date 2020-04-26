@@ -1,0 +1,13 @@
+.top-pane {
+	padding: 2px;
+	margin: 2px;
+	border: 1px solid gray;
+}
+
+.bottom-pane {
+}
+
+.thumb {
+	width:100px;
+	cursor: pointer;
+}
