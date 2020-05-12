@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script>
+			function goToStore() {
+				let storeId = document.getElementById("storeId").value;
+				if (!storeId || storeId.length < 1) {
+					alert("StoreId가 없습니다.");
+					return;
+				}
+
+				if (isNaN(storeId)) {
+					alert("StoreId가 숫자가 아닙니다.");
+					return;
+				}
+
+				location.href = "coupangeats://StoreDetail?storeId="+storeId;
+			}
+		</script>
+	</head>
+
+	<div style="zoom: 2;">
+		<label>StoreId : </label>
+		<input type="text" name="storeId" id="storeId" />
+		<input type="button" value="Open" onclick="goToStore(); return false;"/>
+	</div>
+</html>
